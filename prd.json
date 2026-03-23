@@ -1,0 +1,47 @@
+{
+  "title": "个人导航网站",
+  "stories": [
+    {
+      "id": "US-001",
+      "name": "项目初始化",
+      "priority": 1,
+      "passes": true
+    },
+    {
+      "id": "US-002",
+      "name": "前台首页 - 分组展示",
+      "priority": 2,
+      "passes": true
+    },
+    {
+      "id": "US-003",
+      "name": "前台 - 黑暗模式",
+      "priority": 3,
+      "passes": true
+    },
+    {
+      "id": "US-004",
+      "name": "后台 - 登录认证",
+      "priority": 4,
+      "passes": true
+    },
+    {
+      "id": "US-005",
+      "name": "后台 - 分类管理",
+      "priority": 5,
+      "passes": true
+    },
+    {
+      "id": "US-006",
+      "name": "后台 - 链接管理",
+      "priority": 6,
+      "passes": true
+    },
+    {
+      "id": "US-007",
+      "name": "部署验证",
+      "priority": 7,
+      "passes": true
+    }
+  ]
+}
