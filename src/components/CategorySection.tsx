@@ -1,7 +1,6 @@
 "use client";
 
 import { LinkCard } from "./LinkCard";
-import { Badge } from "@/components/ui/badge";
 
 interface Link {
   id: string;
@@ -20,11 +19,15 @@ export function CategorySection({ name, links }: CategorySectionProps) {
   if (links.length === 0) return null;
 
   return (
-    <section className="mb-8">
-      <Badge variant="outline" className="mb-3 text-sm px-3 py-1">
-        {name}
-      </Badge>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+    <section className="mb-10">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="h-px flex-1 bg-gradient-to-r from-[#8B5CF6]/50 to-transparent" />
+        <h2 className="text-lg font-semibold gradient-text whitespace-nowrap">
+          {name}
+        </h2>
+        <div className="h-px flex-1 bg-gradient-to-l from-[#06B6D4]/50 to-transparent" />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {links.map((link) => (
           <LinkCard key={link.id} {...link} />
         ))}
