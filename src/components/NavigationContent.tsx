@@ -43,7 +43,12 @@ export function NavigationContent({ categories }: NavigationContentProps) {
             link.description?.toLowerCase().includes(query)
         ),
       }))
-      .filter((category) => category.links.length > 0);
+      .filter((category) => {
+        // 匹配分类名称或链接名称/描述
+        const matchCategory = category.name.toLowerCase().includes(query);
+        const matchLinks = category.links.length > 0;
+        return matchCategory || matchLinks;
+      });
   }, [categories, searchQuery]);
 
   return (
