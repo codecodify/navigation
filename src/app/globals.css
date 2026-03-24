@@ -167,15 +167,15 @@
 
 /* Glass morphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .dark .glass {
-  background: rgba(139, 92, 246, 0.05);
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 /* Glow effects */
@@ -245,14 +245,15 @@
 
 /* Tech card styles */
 .tech-card {
-  background: rgba(15, 10, 26, 0.6);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.15);
   transition: all 0.3s ease;
 }
 
 .dark .tech-card {
   background: rgba(15, 10, 26, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .tech-card:hover {
