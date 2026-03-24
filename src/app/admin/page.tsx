@@ -227,7 +227,7 @@ export default function AdminPage() {
         </div>
       </header>
 
-      <main className="container py-8 relative z-10 space-y-6">
+      <main className="container py-8 relative z-10 max-w-2xl mx-auto space-y-6">
         {/* 添加分类 */}
         <div className="tech-card rounded-xl p-6">
           <h2 className="text-lg font-semibold gradient-text mb-4">添加分类</h2>
