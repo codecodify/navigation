@@ -69,7 +69,7 @@ export function NavigationContent({ categories }: NavigationContentProps) {
           </div>
         </div>
       </header>
-      <main className="container py-8 relative z-10">
+      <main className="container py-8 relative z-10 max-w-4xl mx-auto">
         {filteredCategories.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/20 to-[#06B6D4]/20 flex items-center justify-center mb-6">
