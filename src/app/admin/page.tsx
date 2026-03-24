@@ -42,6 +42,7 @@ export default function AdminPage() {
   const [editLinkName, setEditLinkName] = useState("");
   const [editLinkUrl, setEditLinkUrl] = useState("");
   const [editLinkDesc, setEditLinkDesc] = useState("");
+  const [editLinkCategoryId, setEditLinkCategoryId] = useState("");
 
   const checkAuth = useCallback(async () => {
     try {
@@ -150,6 +151,7 @@ export default function AdminPage() {
     setEditLinkName(link.name);
     setEditLinkUrl(link.url);
     setEditLinkDesc(link.description || "");
+    setEditLinkCategoryId(link.categoryId);
   };
 
   const handleUpdateCategory = async () => {
@@ -178,6 +180,7 @@ export default function AdminPage() {
           name: editLinkName,
           url: editLinkUrl,
           description: editLinkDesc,
+          categoryId: editLinkCategoryId,
         }),
       });
       toast.success("链接更新成功");
@@ -413,6 +416,20 @@ export default function AdminPage() {
             <div className="space-y-2">
               <Label>描述</Label>
               <Textarea value={editLinkDesc} onChange={(e) => setEditLinkDesc(e.target.value)} className="glass" />
+            </div>
+            <div className="space-y-2">
+              <Label>分类</Label>
+              <select
+                value={editLinkCategoryId}
+                onChange={(e) => setEditLinkCategoryId(e.target.value)}
+                className="w-full h-10 px-3 rounded-md glass bg-background/80 border border-[#8B5CF6]/20 text-foreground"
+              >
+                {categories.map((cat) => (
+                  <option key={cat.id} value={cat.id}>
+                    {cat.name}
+                  </option>
+                ))}
+              </select>
             </div>
             <Button onClick={handleUpdateLink} className="btn-gradient w-full">保存</Button>
           </div>
