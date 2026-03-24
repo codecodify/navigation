@@ -37,7 +37,7 @@ export function LinkCard({ name, url, description, favicon }: LinkCardProps) {
             <ExternalLink className="w-3 h-3 text-[#8B5CF6]/60 flex-shrink-0" />
           </div>
           {description && (
-            <p className="text-sm text-muted-foreground/80 truncate mt-1" title={description}>
+            <p className="text-sm text-muted-foreground/80 truncate mt-1 selectable" title={description}>
               {description}
             </p>
           )}
